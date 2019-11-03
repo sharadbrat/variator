@@ -79,7 +79,7 @@ module.exports = class Variator {
       throw new VariatorArgumentError('third argument must be function');
     }
 
-    if (settings instanceof Array) {
+    if (!(settings instanceof Array)) {
       throw new VariatorArgumentError('second argument must be array');
     }
 
