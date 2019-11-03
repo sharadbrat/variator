@@ -1,0 +1,32 @@
+{
+  "name": "@sharadbrat/variator",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Library that provides convenient API for easy AB-testing",
+  "main": "index.js",
+  "author": "sharadbrat",
+  "license": "MIT",
+  "keywords": [
+    "ab",
+    "test",
+    "variation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharadbrat/variator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sharadbrat/variator/issues"
+  },
+  "homepage": "https://github.com/sharadbrat/variator#readme",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "@sharadbrat/randomizer": "0.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
+}
