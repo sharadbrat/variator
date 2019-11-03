@@ -11,6 +11,7 @@
     "test",
     "variation"
   ],
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sharadbrat/variator.git"
@@ -19,6 +20,7 @@
     "url": "https://github.com/sharadbrat/variator/issues"
   },
   "homepage": "https://github.com/sharadbrat/variator#readme",
+
   "scripts": {
     "test": "mocha"
   },

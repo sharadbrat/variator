@@ -12,7 +12,7 @@ module.exports = class Variator {
    * @constructor
    */
   constructor() {
-    this.session = {};
+    this._session = {};
   }
 
 
@@ -26,8 +26,8 @@ module.exports = class Variator {
       throw new VariatorArgumentError('argument must be an object');
     }
 
-    this.session = {
-      ...this.session,
+    this._session = {
+      ...this._session,
       ...session,
     };
   }
@@ -38,7 +38,7 @@ module.exports = class Variator {
    * @public
    */
   clear() {
-    this.session = {};
+    this._session = {};
   }
 
 
@@ -57,7 +57,7 @@ module.exports = class Variator {
       throw new VariatorArgumentError('second argument must be function');
     }
 
-    if (this.session[featureName]) {
+    if (this._session[featureName]) {
       return test();
     }
   }
@@ -74,7 +74,7 @@ module.exports = class Variator {
     const r = new Randomizer(settings);
     const subfeatureName = r.choose();
 
-    if (this.session[featureName]) {
+    if (this._session[featureName]) {
       return test(subfeatureName);
     }
   }
