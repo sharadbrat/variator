@@ -71,6 +71,18 @@ module.exports = class Variator {
    * @public
    */
   runWeightedTest(featureName, settings, test) {
+    if (typeof featureName !== 'string') {
+      throw new VariatorArgumentError('first argument must be string')
+    }
+
+    if (typeof test !== 'function') {
+      throw new VariatorArgumentError('third argument must be function');
+    }
+
+    if (settings instanceof Array) {
+      throw new VariatorArgumentError('second argument must be array');
+    }
+
     const r = new Randomizer(settings);
     const subfeatureName = r.choose();
 
